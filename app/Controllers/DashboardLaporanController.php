@@ -27,7 +27,7 @@ class DashboardLaporanController extends BaseController
             ->getResultArray();
 
         $data['pengiriman_detail'] = $pengirimanModel
-            ->select('customer.customer_name, destinasi.destinasi_name, pengiriman.biaya_pengiriman, pengiriman.tanggal_sampai, COUNT(*) as jumlah_pengiriman')
+            ->select('customer.customer_name, destinasi.destinasi_name, pengiriman.biaya_pengiriman, pengiriman.tanggal, pengiriman.tanggal_sampai, COUNT(*) as jumlah_pengiriman')
             ->join('customer', 'customer.customer_id = pengiriman.customer_id')
             ->join('destinasi', 'destinasi.destinasi_id = pengiriman.destinasi_id')
             ->groupBy('customer.customer_name, destinasi.destinasi_name, pengiriman.biaya_pengiriman, pengiriman.tanggal_sampai')

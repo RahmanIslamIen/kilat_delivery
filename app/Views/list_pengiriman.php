@@ -111,7 +111,7 @@
                                 </center>
                             </td>
                             <td>
-                                <a href="<?= base_url('/detail-data') . '/' . $row['tanggal_sampai'] ?>"
+                                <a href="<?= base_url('/detail-data') . '/' . $row['tanggal'] . '/' . $row['tanggal_sampai'] ?>"
                                     class="btn btn-info text-white">Detail</a>
                             </td>
                         </tr>
