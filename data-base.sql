@@ -15,18 +15,18 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Membuang struktur basisdata untuk dani_basse_pwl_411211051
-CREATE DATABASE IF NOT EXISTS `dani_basse_pwl_411211051` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `dani_basse_pwl_411211051`;
+-- Membuang struktur basisdata untuk kilat_delivery
+CREATE DATABASE IF NOT EXISTS `kilat_delivery` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `kilat_delivery`;
 
--- membuang struktur untuk table dani_basse_pwl_411211051.customer
+-- membuang struktur untuk table kilat_delivery.customer
 CREATE TABLE IF NOT EXISTS `customer` (
   `customer_id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_name` varchar(150) NOT NULL,
   PRIMARY KEY (`customer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Membuang data untuk tabel dani_basse_pwl_411211051.customer: ~20 rows (lebih kurang)
+-- Membuang data untuk tabel kilat_delivery.customer: ~20 rows (lebih kurang)
 INSERT INTO `customer` (`customer_id`, `customer_name`) VALUES
 	(1, 'Dewi Kartika'),
 	(2, 'Dimas Hadiwijaya'),
@@ -49,14 +49,14 @@ INSERT INTO `customer` (`customer_id`, `customer_name`) VALUES
 	(19, 'Andika Pratama'),
 	(20, 'Santo Nugroho');
 
--- membuang struktur untuk table dani_basse_pwl_411211051.destinasi
+-- membuang struktur untuk table kilat_delivery.destinasi
 CREATE TABLE IF NOT EXISTS `destinasi` (
   `destinasi_id` int(11) NOT NULL AUTO_INCREMENT,
   `destinasi_name` varchar(150) NOT NULL,
   PRIMARY KEY (`destinasi_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Membuang data untuk tabel dani_basse_pwl_411211051.destinasi: ~20 rows (lebih kurang)
+-- Membuang data untuk tabel kilat_delivery.destinasi: ~20 rows (lebih kurang)
 INSERT INTO `destinasi` (`destinasi_id`, `destinasi_name`) VALUES
 	(1, 'DKI Jakarta'),
 	(2, 'Jawa Barat '),
@@ -79,7 +79,7 @@ INSERT INTO `destinasi` (`destinasi_id`, `destinasi_name`) VALUES
 	(19, 'Papua Pegunungan'),
 	(20, 'Papua Selatan');
 
--- membuang struktur untuk table dani_basse_pwl_411211051.pengiriman
+-- membuang struktur untuk table kilat_delivery.pengiriman
 CREATE TABLE IF NOT EXISTS `pengiriman` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tanggal` date NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `pengiriman` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Membuang data untuk tabel dani_basse_pwl_411211051.pengiriman: ~22 rows (lebih kurang)
+-- Membuang data untuk tabel kilat_delivery.pengiriman: ~22 rows (lebih kurang)
 INSERT INTO `pengiriman` (`id`, `tanggal`, `customer_id`, `destinasi_id`, `biaya_pengiriman`, `tanggal_sampai`) VALUES
 	(1, '2024-01-01', 1, 5, 150000.00, '2024-01-10'),
 	(2, '2024-01-02', 2, 3, 172000.00, '2024-01-08'),
