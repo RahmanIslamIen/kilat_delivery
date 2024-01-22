@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'dani_basse_pwl_411211051',
+        'database' => 'kilat_delivery',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
